@@ -9,3 +9,4 @@
 * To deactivate the virtual environment `deactivate`
 * Create first django project `django-admin startproject <name-of-the-project> .`
 * Run project on Localhost `python manage.py runserver`, normally redirected to [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
+* To sync and activate whatever configuration in django project `cd src` --> `python manage.py migrate`
