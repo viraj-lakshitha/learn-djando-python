@@ -27,5 +27,5 @@
 
 ----
 
-* To create components or application `python manage.py <name-of-the-component>
-* When you do changes in model.py file then make sure to run the commands `python manage.py makemigrations` and `python manage.py migrate`
+* To create components or application `python manage.py startapp <name-of-the-component>`
+* When you do change in model.py file then make sure to run the commands `python manage.py makemigrations` and `python manage.py migrate`
