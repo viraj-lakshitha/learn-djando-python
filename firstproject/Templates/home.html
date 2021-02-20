@@ -3,5 +3,36 @@
 {% block content %}
     <h1>Hello World !</h1>
     <p>Template works !</p>
+
+    <hr>
+    <p>Using dictionary, pass the data</p>
+    My name is {{name}} , University {{uni}}
+
+    <hr>
+    <p>Iterate though the items inside the list</p>
+
+    <ul>
+        {% for subject in subjects %}
+            <li>{{forloop.counter}} - {{subject}}</li>
+        {% endfor %}
+    </ul>
+
+    <hr>
+    <p>Using if elif else in for loops</p>
+
+    <ul>
+        {% for i in code %}
+            <li>{{forloop.counter}} - {{ i }}</li>
+            {% if i == 10 %}
+                <li>Ten</li>
+            {% elif i == 20 %}
+                <li>Twenty</li>
+            {% elif i == 30 %}
+                <li>Thirty</li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+
+
 {% endblock %}
 

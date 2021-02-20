@@ -103,7 +103,6 @@ and follow the URLs => [http://127.0.0.1:8000/home](http://127.0.0.1:8000/admin)
 ### ⚡ Django Templates
 
 ----
-[Django Template](https://docs.djangoproject.com/en/3.1/topics/templates/#:~:text=A%20Django%20template%20is%20a,interpreted%20by%20the%20template%20engine.&text=A%20template%20is%20rendered%20with,the%20context%2C%20and%20executes%20tags.)
 
 * Update the view.py file in PageView folder as
 ```
@@ -112,3 +111,13 @@ def home_view(request, *args, **kwargs):
 ```
 * Create the Templates folder in root folder and add **home.html** file and then update the setting folder,
   (Under the TEMPLATES) as `'DIRS': [os.path.join(BASE_DIR, "Templates")],`
+  
+### 📃 References
+
+---
+
+1. [Templates](https://docs.djangoproject.com/en/3.1/ref/templates/builtins/)
+2. [Build in template tags and filters]([Django Template](https://docs.djangoproject.com/en/3.1/topics/templates/#:~:text=A%20Django%20template%20is%20a,interpreted%20by%20the%20template%20engine.&text=A%20template%20is%20rendered%20with,the%20context%2C%20and%20executes%20tags.))
+3. [Custom Filters](https://docs.djangoproject.com/en/3.1/howto/custom-template-tags/)
+[]()
+
