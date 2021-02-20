@@ -19,7 +19,7 @@
 
 ----
 
-* To sync and activate whatever configuration in django project `cd src` --> `python manage.py migrate`
+* To sync and activate whatever configuration in django project `cd src` ==> `python manage.py migrate`
 * View Django administration [http://127.0.0.1:8000/admin](http://127.0.0.1:8000/admin)
 * Create super user to login django administration `python manage.py createsuperuser` , before create super user make super to activate the virtual enviroment
 
@@ -57,7 +57,7 @@ admin.site.register(Products)
 ```
 * In settings.py file update with the component, that you added as `Products` in _INSTALLED_APPS_
 * After saving all the files, make migrations as `python manage.py makemigrations` and migrate as `python manage.py migrate`
-* Then follow the link -> [http://127.0.0.1:8000/admin](http://127.0.0.1:8000/admin) and goto the Product and add products to the database.
+* Then follow the link => [http://127.0.0.1:8000/admin](http://127.0.0.1:8000/admin) and goto the Product and add products to the database.
 * If you want to add the new product to the products, follow these steps 
   (First open python shell as `python manage.py shell`)
 ```
@@ -98,3 +98,17 @@ urlpatterns = [
     path('contact/', views.contact_view, name='contact')
 ]
 ```
+and follow the URLs => [http://127.0.0.1:8000/home](http://127.0.0.1:8000/admin) and [http://127.0.0.1:8000/contact](http://127.0.0.1:8000/admin)
+
+### ⚡ Django Templates
+
+----
+[Django Template](https://docs.djangoproject.com/en/3.1/topics/templates/#:~:text=A%20Django%20template%20is%20a,interpreted%20by%20the%20template%20engine.&text=A%20template%20is%20rendered%20with,the%20context%2C%20and%20executes%20tags.)
+
+* Update the view.py file in PageView folder as
+```
+def home_view(request, *args, **kwargs):
+    return render(request, "home.html", {})
+```
+* Create the Templates folder in root folder and add **home.html** file and then update the setting folder,
+  (Under the TEMPLATES) as `'DIRS': [os.path.join(BASE_DIR, "Templates")],`
