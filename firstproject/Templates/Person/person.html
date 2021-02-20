@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Person Details</h1>
+<hr>
+<!--<p>First Name: {{firstName}}</p>-->
+<!--<p>Last Name: {{lastName}}</p>-->
+<!--<p>Email Address: {{emailAddress}}</p>-->
+
+<p>First Name: {{object.firstName}}</p>
+<p>Last Name: {{object.lastName}}</p>
+<p>Email Address: {{object.emailAddress}}</p>
+
+
+{% endblock %}

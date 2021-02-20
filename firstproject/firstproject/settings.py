@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     'Products',
     'PageView',
+    'Person',
 ]
 
 MIDDLEWARE = [
