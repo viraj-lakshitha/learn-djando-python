@@ -1,10 +1,10 @@
-# Learn Django Framework using Python
+# Learn Django Framework using Python 🚩
 
 ----
 
-### Writing First Django Application (For Windows)
+### ⚡ Writing First Django Application (For Windows)
 
-##### Install Virtual ENV & Djanog and Create brand new project
+##### 🔥 Install Virtual ENV & Django and Create brand-new project
 
 ----
 
@@ -15,7 +15,7 @@
 * Create first django project `django-admin startproject <name-of-the-project> .`
 * Run project on Localhost `python manage.py runserver`, normally redirected to [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
 
-##### Configurations and Super User
+##### 🔥 Configurations and Super User
 
 ----
 
@@ -23,7 +23,7 @@
 * View Django administration [http://127.0.0.1:8000/admin](http://127.0.0.1:8000/admin)
 * Create super user to login django administration `python manage.py createsuperuser` , before create super user make super to activate the virtual enviroment
 
-##### Create new Application( Components )
+##### 🔥 Create new Application( Components )
 
 ----
 
@@ -31,7 +31,7 @@
 * When you do change in model.py file then make sure to run the commands `python manage.py makemigrations` and `python manage.py migrate`
 * Open up Python terminal `python manage.py shell`
 
-##### Create new Product Application
+##### 🔥 Create new Product Application
 
 ----
 
@@ -66,4 +66,4 @@ admin.site.register(Products)
 >> Products.objects.create(title='New Product', description='Test Description', price='
 $ 100', summary='Test from Shell')
 ```
-
+ For further details about fields [Click](https://docs.djangoproject.com/en/3.1/ref/models/fields/)
