@@ -67,3 +67,34 @@ admin.site.register(Products)
 $ 100', summary='Test from Shell')
 ```
  For further details about fields [Click](https://docs.djangoproject.com/en/3.1/ref/models/fields/)
+ 
+##### 🔥 Binding with Frontend
+
+----
+
+* First create a new component as PageView `python manage.py startapp PageView` and Update the setting.py file with component.
+* Update the view.py file in PageView component as
+```
+from django.shortcuts import render
+from django.http import HttpResponse
+
+#Create your views here.
+def home_view(request, *args, **kwargs):
+    return HttpResponse("<h1>Home Page !</h1>")  # string of HTML code
+
+def contact_view(request, *args, **kwargs):
+    return HttpResponse("<h1>Contact Page !</h1>")
+```
+* Update the URL of the pages in urls.py file (inside the 'FirstProject' folder) as
+```
+from django.contrib import admin
+from django.urls import path
+
+from PageView import views
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('home/', views.home_view, name='home'),
+    path('contact/', views.contact_view, name='contact')
+]
+```
