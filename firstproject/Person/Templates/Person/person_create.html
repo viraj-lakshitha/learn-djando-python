@@ -4,9 +4,17 @@
 <h1>Add Person</h1>
 <hr>
 
-<form method="POST"> {% csrf_token %}
+<form method="POST">
+    Method 1
+    {% csrf_token %}
     {{ form.as_p }}
-    <input type="submit" value="Save">
 </form>
+
+<!--<form action='/search' method="POST">-->
+<!--&lt;!&ndash;    Method 2 | Suitable for the search  (GET)&ndash;&gt;-->
+<!--    {% csrf_token %}-->
+<!--    <input type="firstName" name="firstName" placeholder="Your First Name" />-->
+<!--    <input type="submit" value="Save">-->
+<!--</form>-->
 
 {% endblock %}
