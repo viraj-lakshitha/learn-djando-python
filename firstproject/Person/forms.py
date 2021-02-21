@@ -12,5 +12,5 @@ class PersonForm(forms.ModelForm):
 
 class RawPersonForm(forms.Form):
     firstName = forms.CharField()
-    firstName = forms.CharField()
-    firstName = forms.EmailField()
+    lastName = forms.CharField()
+    emailAddress = forms.EmailField()
