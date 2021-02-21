@@ -1,7 +1,9 @@
 from django.shortcuts import render
 from .models import Person
-from .forms import PersonForm, RawPersonForm
+from .forms import PersonForm,RawPersonForm
 
+
+from .forms import PersonForm
 
 
 # Create your views here.
@@ -19,6 +21,7 @@ from .forms import PersonForm, RawPersonForm
 
 ### Method 2
 def person_create_view(request):
+
     my_form = RawPersonForm(request.POST)
     context = {
         "form" : my_form
@@ -35,6 +38,11 @@ def person_search_view(request):
     search_keyword = request.POST.get('title')
     context = {'keyword': search_keyword}
     return render(request, "Person/person_search.html", context)
+
+
+    context = {}
+    return render(request, "Person/person_create.html", context)
+
 
 def person_detail_view(request):
     obj = Person.objects.get(id=1)
